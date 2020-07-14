@@ -11,3 +11,22 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentytwentychild
 */
+.singular .entry-header {
+    padding: 1rem 0;
+}
+
+.cabecera{
+    display: flex;
+    justify-content: space-around;
+}
+.cabecera img{
+    width:20%;
+
+}
+.navegacion{
+    width: 30%;
+}
+.contenido{
+    display: flex;
+    justify-content: space-between;
+}
