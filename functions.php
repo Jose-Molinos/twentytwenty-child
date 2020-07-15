@@ -25,6 +25,7 @@ if (function_exists('register_sidebar')) {
         'after_title'   => '</h2>'
     ));
 }
+
 // Incluir Bootstrap CSS
 function bootstrap_css() {
 	wp_enqueue_style( 'bootstrap_css', 
@@ -50,4 +51,21 @@ function bootstrap_js() {
   					true); 
 }
 add_action( 'wp_enqueue_scripts', 'bootstrap_js');
+
+
+/**
+ * Register navigation menus uses wp_nav_menu in five places.
+ */
+function twentytwenty_child_menus() {
+
+	$locations = array(
+		'vertical'  => __( 'Menu Vertical Plantilla', 'twentytwentychild' )
+	);
+
+	register_nav_menus( $locations );
+}
+
+add_action( 'init', 'twentytwenty_child_menus' );
+
+
 ?>
