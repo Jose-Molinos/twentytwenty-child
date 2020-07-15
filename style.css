@@ -11,3 +11,25 @@
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twentytwentychild
 */
+
+.menu_vertical{
+    list-style: none;
+    font-size: 2.5rem;
+    margin-left: 0;
+}
+.menu_vertical li{
+    margin-left: 0;
+    line-height: 3;
+    border-bottom: 1px solid black;
+}
+
+#main{
+    width: 80%;
+    margin: 0 auto;
+}
+.contenido_principal{
+    padding-top: 0;
+}
+.contenido_principal>figure{
+    margin-top: 0!important;
+}
