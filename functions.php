@@ -26,7 +26,10 @@ if (function_exists('register_sidebar')) {
     ));
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 82d6ff369ba8a47566d57e20c9b5e997238a375b
 // Incluir Bootstrap CSS
 function bootstrap_css() {
 	wp_enqueue_style( 'bootstrap_css', 
@@ -59,8 +62,12 @@ add_action( 'wp_enqueue_scripts', 'bootstrap_js');
 function twentytwenty_child_menus() {
 
 	$locations = array(
+<<<<<<< HEAD
 		'vertical'  => __( 'Menu Vertical Plantilla', 'twentytwentychild' ),
 		
+=======
+		'vertical'  => __( 'Menu Vertical Plantilla', 'twentytwentychild' )
+>>>>>>> 82d6ff369ba8a47566d57e20c9b5e997238a375b
 	);
 
 	register_nav_menus( $locations );
@@ -68,4 +75,8 @@ function twentytwenty_child_menus() {
 
 add_action( 'init', 'twentytwenty_child_menus' );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 82d6ff369ba8a47566d57e20c9b5e997238a375b
 ?>

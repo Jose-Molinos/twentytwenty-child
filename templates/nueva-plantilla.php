@@ -36,6 +36,7 @@ if (has_nav_menu('primary')) {
 								<ul class="menu_vertical">
 
 								<?php
+<<<<<<< HEAD
 if (has_nav_menu('vertical')) {
 
                 wp_nav_menu(
@@ -48,12 +49,27 @@ if (has_nav_menu('vertical')) {
 
             }
             ?>
+=======
+								if ( has_nav_menu( 'vertical' ) ) {
+
+									wp_nav_menu(
+										array(
+											'container'  => '',
+											'items_wrap' => '%3$s',
+											'theme_location' => 'vertical',
+										)
+									);
+
+								} 
+								?>
+>>>>>>> 82d6ff369ba8a47566d57e20c9b5e997238a375b
 
 								</ul>
 
 							</nav><!-- .primary-menu-wrapper -->
 
 						<?php
+<<<<<<< HEAD
 }
         ?>
             </nav>
@@ -76,3 +92,26 @@ if (has_nav_menu('vertical')) {
 <?php get_template_part('template-parts/footer-menus-widgets');?>
 
 <?php get_footer(); ?>
+=======
+					}
+?>
+
+
+                    </nav>
+                    <section class="col-sm-8 contenido_principal">
+                        <?php echo the_content(); ?>
+                    </section>
+                </div>
+
+            </article>
+    <?php
+        }
+    }
+
+    ?>
+
+</div>
+<?php get_template_part( 'template-parts/footer-menus-widgets' ); ?>
+
+<?php get_footer(); ?>
+>>>>>>> 82d6ff369ba8a47566d57e20c9b5e997238a375b
