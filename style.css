@@ -30,3 +30,19 @@
     display: flex;
     justify-content: space-between;
 }
+.menu_vertical{
+    list-style: none;
+    font-size: 2.5rem;
+    margin-left: 0;
+}
+.menu_vertical li{
+    margin-left: 0;
+    line-height: 2.8;
+    border-bottom: 2px solid black;
+}
+.contenido_principal{
+    padding-top: 0;
+}
+.contenido_principal >figure{
+    margin-top: 0 !important;
+}

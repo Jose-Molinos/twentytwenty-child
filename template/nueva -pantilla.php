@@ -24,13 +24,42 @@ if (have_posts()) {
 <div class="cabecera">
 
 <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'twentytwenty-fullscreen' );?>">
-<?php the_title("<h1>", "</h1>", true);?>
+<?php the_title("<h1 class='col-sm-8'>", "</h1>", true);?>
     </div>
     <div class="contenido">
-    <nav class="navegacion">
-    algo
+    <nav class="navegacion col-sm-4">
+  
+    <?php
+					if ( has_nav_menu( 'vertical'  ) ) {
+						?>
+
+							<nav class="primary-menu-wrapper" aria-label="<?php esc_attr_e( 'Horizontal', 'twentytwenty' ); ?>" role="navigation">
+
+								<ul class="menu_vertical">
+
+								<?php
+								if ( has_nav_menu( 'primary' ) ) {
+
+									wp_nav_menu(
+										array(
+											'container'  => '',
+											'items_wrap' => '%3$s',
+											'theme_location' => 'primary',
+										)
+									);
+
+								} 
+								?>
+
+								</ul>
+
+							</nav><!-- .primary-menu-wrapper -->
+
+						<?php
+					}
+?>
     </nav>
-    <section>
+    <section class="col-sm-8 contenido_principal">
         <?php echo the_content();?>
     </section>
     </div>
@@ -40,3 +69,5 @@ if (have_posts()) {
 }
 ?>
 </div>
+<?php get_template_part ('template-parts/footer-menus-widgets');?>
+<?php get_footer();?>
